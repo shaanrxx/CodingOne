@@ -15,3 +15,7 @@ The maze will automatically generate but if r is pressed at any point the game w
 I like that idea as players could play for as long as they wanted.
 A point is added to the players overall score.
 If the timer runs out, a game over pop up is shown and there is an option to press restart. No points are added.
+
+
+Parts of my code, specifically the maze generator sections are sourced from other code online, but integreated into my design to fit my desired outcome.
+http://danduda.com/blog/2018/11/23/Build-a-2-player-maze-game-with-Python-Part-6/
