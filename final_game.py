@@ -2,6 +2,7 @@
 
 ##For parts of my code I used a tutorial online to help with the maze generating sections of my code as I found it to be very challenging to figure out without using other peoples code for guidance.
 ##However, I read through it to understand it and took notes. Once I managed to acheive the maze generator section of my code I made it my own. I added other features to it.
+##I have commented where I have used code from elsewhere to add to my design.
 
 
 from enum import Enum     #enumerations
@@ -59,7 +60,7 @@ mixer.music.load("pygameBackground.mp3")
 mixer.music.play(-1)
 
 
-class CellProp(Enum):
+class CellProp(Enum):     ##turorial code
     Path_N = 1           #bitwise flags defined to mark the directions of the players movement
     Path_E = 2          
     Path_S = 4
@@ -73,7 +74,7 @@ class Direction(Enum):
     West = (-1, 0)
 
 
-class Player(pg.sprite.Sprite):
+class Player(pg.sprite.Sprite):              ##tutorial code
     def __init__(self, colour, x, y, radius):
         # Call the parent class (Sprite) constructor
         super().__init__()
@@ -117,7 +118,7 @@ class Text(Sprite):
     def set_text(self, text):
         self._text = text
         self.render()
-class Timer:
+class Timer:                                          #tutorial code
     def __init__(self, start, interval, callback):
         self.tick = start
         self.interval = interval
@@ -143,7 +144,7 @@ class CountDownTimer:                                  ##timer worked on using a
             self.timer.update(ticks)
  
 class DisplayCountDown:
-    def __init__(self, count, font, color, position, anchor="topleft", interval=1000):
+    def __init__(self, count, font, color, position, anchor="topleft", interval=1000):          #turorial code
         self.countdown = CountDownTimer(count, self.update_text, interval)
         self.display = "{:02d}"
         self.text = Text(self.display.format(self.countdown.count), font, color, position, anchor)
@@ -256,7 +257,7 @@ class MazeGenerator:           ##maze generator code worked on using a tutorial 
     
 
 
-    def generate_maze(self):
+    def generate_maze(self):                              ##tutorial code    
         #initializes the maze wit zero values
         self.maze = [0] * cell_COUNT
         visited_count = 0
@@ -273,7 +274,7 @@ class MazeGenerator:           ##maze generator code worked on using a tutorial 
 
 
         visited_count += 1
-        while visited_count < cell_COUNT:    #loops until visted count reaches the number of cells in maze
+        while visited_count < cell_COUNT:    #loops until visted count reaches the number of cells in maze            
             #step 1: create list of the unvisited neighbours
             x, y = process_stack[-1]   #get position to top item on stack
             current_cell_index = self.get_cell_index((x,y))    # get the cell's index
@@ -550,7 +551,7 @@ class MazeGenerator:           ##maze generator code worked on using a tutorial 
         self.draw_players()     
  
 
-    def try_move(self, player, direction):
+    def try_move(self, player, direction):                                  ##tutorials work
         if self.can_move(direction, player):
             self.move(player, direction.value)
         else:
