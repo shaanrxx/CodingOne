@@ -125,7 +125,7 @@ class Timer:
             self.tick += self.interval
             self.callback(self)
  
-class CountDownTimer:
+class CountDownTimer:                                  ##timer worked on using a tutorial
     def __init__(self, count, callback, interval=1000):
         self.count = count
         self.callback = callback
@@ -188,7 +188,8 @@ class DisplayCountDown:
  
 
 
-class MazeGenerator:
+class MazeGenerator:           ##maze generator code worked on using a tutorial online to create it
+    
 
 
     direction_to_flag = {
@@ -321,7 +322,7 @@ class MazeGenerator:
 
 
 
-    def draw_maze(self):
+    def draw_maze(self):                             ##part of tutorial online
         self.screen.fill(bg_colour)
         pg.draw.rect(self.screen, wall_colour, (top_left_corner[0], top_left_corner[0], maze_WIDTH_PX, MAZE_HEIGHT_PX))
         
@@ -389,7 +390,7 @@ class MazeGenerator:
         pg.display.update([(p1_x, p1_y, p1_w, p1_h), (p2_x, p2_y, p2_w, p2_h)])
 
 
-    def draw_instructions(self):
+    def draw_instructions(self):                       
         #Displays intructions
         font = pg.font.SysFont("Arial", 18, True)
 
@@ -477,7 +478,7 @@ class MazeGenerator:
             self.screen.blit(text, (20, 20))
             pygame.display.flip()
         
-    def get_player_cell_indexes(self, player):
+    def get_player_cell_indexes(self, player):                ##worked on using a tutorial 
         # Top left corner of first cell
         corner_offset_x = top_left_corner[0] + BLOCK_SIZE
         corner_offset_y = top_left_corner[1] + BLOCK_SIZE
