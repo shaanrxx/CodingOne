@@ -19,3 +19,7 @@ If the timer runs out, a game over pop up is shown and there is an option to pre
 
 Parts of my code, specifically the maze generator sections are sourced from other code online, but integrated into my design to fit my desired outcome.
 http://danduda.com/blog/2018/11/23/Build-a-2-player-maze-game-with-Python-Part-6/
+
+Other tutorials used include:
+https://www.youtube.com/watch?v=rLrMPg-GCqo&t=342s
+
