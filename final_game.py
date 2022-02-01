@@ -1,5 +1,8 @@
 ## MY FINAL GAME
 
+##For parts of my code I used a tutorial online to help with the maze generating sections of my code as I found it to be very challenging to figure out without using other peoples code for guidance.
+##However, I read through it to understand it and took notes. Once I managed to acheive the maze generator section of my code I made it my own. I added other features to it.
+
 
 from enum import Enum     #enumerations
 import random
